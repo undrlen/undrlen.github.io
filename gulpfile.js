@@ -48,22 +48,22 @@ gulp.task('default', gulp.parallel('watch:sass', 'serve'));
 gulp.task('js', function () {
 
   return gulp.src([
-    'app/libs/jquery/dist/jquery.min.js',
+    'app/libs/jquery/docs/jquery.min.js',
     // 'app/libs/menu/drop_down_nav/doubletaptogo.js',
     'app/libs/jquery-migrate-1.2.1.min.js',
     'app/libs/slick/slick.min.js',
     // 'app/libs/ResponsiveSlides/responsiveslides.min.js',
-    // 'app/libs/owl.carousel/dist/owl.carousel.min.js',
+    // 'app/libs/owl.carousel/docs/owl.carousel.min.js',
     // 'app/libs/jquery-ui-acc-tab/jquery-ui.min.js',
     // 'app/libs/jquery-ui-progressbar/jquery-ui.min.js',
     // 'app/libs/jquery-ui-effects/jquery-ui.min.js',
     // 'app/libs/jquery-ui-selectmenu/jquery-ui.min.js',
-    // 'app/libs/smoothscroll/dist/smoothscroll.min.js',
+    // 'app/libs/smoothscroll/docs/smoothscroll.min.js',
     // 'app/libs/fontawesome/fontawesome-all.min.js'
     // 'app/libs/cache-polyfill.js',
     // 'app/libs/lazyload-8.17.0/lazyload.min.js',
     //    'app/libs/anime-master/lib/anime.min.js'
-    // 'app/blocks/video.js/dist/video.js'
+    // 'app/blocks/video.js/docs/video.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -74,7 +74,7 @@ gulp.task('js', function () {
 // Сжатая  сборка  //////////////////////////////////////
 
 function clean() {
-  return del('dist/**');
+  return del('docs/**');
 };
 
 function imageCompression() {
@@ -116,7 +116,7 @@ function jsBabel() {
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
 };
 
 function publish() {
@@ -143,7 +143,7 @@ function publish() {
     ////////////////////////////////////////////////////////////
     '!app/libs/**'
   ], { base: 'app' })
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 
 };
 

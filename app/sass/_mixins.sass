@@ -1,0 +1,261 @@
+// @import "smart-grid.sass"
+@import "mygrid"
+
+=fc($width)
+	&:nth-of-type(1n+2)
+		margin-left: $width
+		
+
+=r($width)
+	@media (max-width: $width+ "px")
+		@content
+
+=f($width)
+	@media (min-width: $width+ "px")
+		@content
+
+=a
+	margin:
+		left: auto
+		right: auto
+
+@function p($ch, $zn)
+	@return ($ch / $zn * 100%)
+
+=cl
+	&:after
+		content: ''
+		display: block
+		clear: both
+
+=cy
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+
+=cx
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+
+=c
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+
+=ib
+	display: inline-block
+	vertical-align: top
+
+=float($kuda)
+	float: $kuda
+	&:after
+		clear: both
+
+
+=pseudo($display: block, $pos: absolute, $content: '')
+	content: $content
+	display: $display
+	position: $pos
+
+=ov($bgc: .25)
+	content: ''
+	display: block
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background-color: rgba(0, 0, 0, $bgc)
+
+=responsive-ratio($x,$y, $pseudo: false)
+	$padding: unquote( ( $y / $x ) * 100 + '%' )
+	@if $pseudo
+		&:before
+			+pseudo($pos: relative);
+			width: 100%;
+			padding-top: $padding
+	@else
+		padding-top: $padding
+
+=css-triangle($color, $size: 6px, $direction: down, $position: absolute, $round: false)
+	+pseudo($pos: $position)
+	width: 0
+	height: 0
+	@if $round
+		border-radius: 3px
+
+	@if $direction == down
+		border-left: $size solid transparent
+		border-right: $size solid transparent
+		border-top: $size solid $color
+		margin-top: 0 - round( $size / 2.5 )
+	@else if $direction == up
+		border-left: $size solid transparent
+		border-right: $size solid transparent
+		border-bottom: $size solid $color
+		margin-bottom: 0 - round( $size / 2.5 )
+	@else if $direction == right
+		border-top: $size solid transparent
+		border-bottom: $size solid transparent
+		border-left: $size solid $color
+		margin-right: -$size
+	@else if  $direction == left
+		border-top: $size solid transparent
+		border-bottom: $size solid transparent
+		border-right: $size solid $color
+		margin-left: -$size
+
+// =font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+// 	@font-face
+// 		font-family: $font-family
+// 		font-weight: $weight
+// 		font-style: $style
+
+// 		@if $asset-pipeline == true 
+// 			src: font-url('#{$file-path}.eot')
+// 			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
+// 		@else
+// 			src: url('#{$file-path}.eot')
+// 			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+
+=font-face($font-name, $file-name, $font-weight: 400, $font-style: normal, $font-display: fallback)
+	@font-face
+		font-family: quote($font-name)
+		src: url($file-name + '.woff2') format('woff2'), url($file-name + '.woff') format('woff')
+		font-weight: $font-weight
+		font-style: $font-style
+		font-display: $font-display
+
+=font($size: false, $color: false, $family: false, $lh: false, $weight: false, $style: false)
+	@if $family
+		font-family: quote($family), serif
+		// font-family: quote($family), Arial, Helvetica, sans-serif
+	@else
+		font-family: $dff
+	@if $size
+		font-size: $size
+	@else
+		font-size: $dfs
+	@if $color
+		color: $color
+	@else
+		color: $dfc
+	@if $weight
+		font-weight: $weight
+	@if $lh
+		line-height: $lh
+	@if $style
+		font-style: $style
+
+@function calculateRem($size)
+	$remSize: $size / 16px
+	@return $remSize * 1rem
+
+=f-z($size)
+	font-size: $size
+	font-size: calculateRem($size)
+
+=gradient($start-color, $end-color, $orientation)
+	background: $start-color
+	@if $orientation == 'vertical'
+		background: -webkit-linear-gradient(top, $start-color, $end-color)
+		background: linear-gradient(to bottom, $start-color, $end-color)
+	@else if $orientation == 'horizontal'
+		background: -webkit-linear-gradient(left, $start-color, $end-color)
+		background: linear-gradient(to right, $start-color, $end-color)
+	@else
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color)
+		background: radial-gradient(ellipse at center, $start-color, $end-color)
+
+
+=pa($l: false, $t: false, $r: false, $b: false)
+	position: absolute
+	@if $b
+		bottom: $b
+		@if $l
+			left: $l
+		@else
+			right: $r
+	@else if $r
+		right: $r
+		top: $t
+	@else
+		left: $l
+		top: $t
+		
+
+=fa($prefix, $content)
+	&-#{$prefix}
+		&:before
+			content: $content
+
+=ion($prefix, $content)
+	&_#{$prefix}
+		&:before
+			content: $content
+			cursor: pointer
+
+// Create placeholder mixin
+@mixin placeholder($color, $size:"")
+	&::-webkit-input-placeholder
+		color: $color
+		@if $size != ""
+			font-size: $size
+
+
+	&:-moz-placeholder
+		color: $color
+		@if $size != ""
+			font-size: $size
+
+	&::-moz-placeholder
+		color: $color
+		@if $size != ""
+			font-size: $size
+
+	&:-ms-input-placeholder
+		color: $color
+		@if $size != ""
+			font-size: $size
+
+=three($width_page, $margins_and_paddings, $mr: 20, $min_width_col: 200)
+	$step: $margins_and_paddings + $mr*2 + $min_width_col*3
+	+ib
+	width: p(($width_page - 2*$mr)/3, $width_page)
+	&:not(:last-child)
+		margin-right: p($mr, $width_page)
+		+r($step)
+			margin-right: 0
+	+r($step)
+		width: 100%
+
+=two($width_page, $margins_and_paddings, $mr: 20, $min_width_col: 210)
+	$step: $margins_and_paddings + $mr + $min_width_col*2
+	+ib
+	width: p(($width_page - $mr)/2, $width_page)
+	&:not(:last-child)
+		margin-right: p($mr, $width_page)
+		+r($step)
+			margin-right: 0
+	+r($step)
+		width: 100%
+
+=fo($width_page, $margins_and_paddings, $mr: 20, $min_width_col: 210)
+	$step1: $margins_and_paddings + 3*$mr + $min_width_col*4
+	$step2: $margins_and_paddings/2 + $mr + $min_width_col*2
+	+ib
+	width: p(($width_page - 3*$mr)/4, $width_page)
+	&:not(:last-child)
+		margin-right: p($mr, $width_page)
+		+r($step1)
+			margin-right: inherit
+	+r($step1)
+		width: p(($width_page - $mr)/2, $width_page)
+		&:nth-child(odd)
+			margin-right: p($mr, $width_page)
+			+r($step2)
+				margin-right: 0
+	+r($step2)
+		width: 100%

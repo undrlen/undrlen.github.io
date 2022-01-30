@@ -1,3 +1,4 @@
+
 const { src, dest, parallel, series, watch } = require('gulp');
 const bs = require('browser-sync').create();
 const sass = require('gulp-sass')(require('sass'));
@@ -5,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const del = require('del');
+
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const cleancss = require('gulp-clean-css');
@@ -34,7 +36,9 @@ exports.default = parallel(() => watch('app/sass/**/*', styles), browsersync);
 
 
 
+
 // вручную подключаем скрипты ///////////////////
+
 
 function js() {
 
@@ -43,6 +47,7 @@ function js() {
     // 'app/libs/menu/drop_down_nav/doubletaptogo.js',
     // 'app/libs/jquery-migrate-1.2.1.min.js'
     'app/libs/slick/slick.js',
+
     // 'app/libs/ResponsiveSlides/responsiveslides.min.js',
     // 'app/libs/owl.carousel/docs/owl.carousel.min.js',
     // 'app/libs/jquery-ui-acc-tab/jquery-ui.min.js',
@@ -53,7 +58,9 @@ function js() {
     // 'app/libs/fontawesome/fontawesome-all.min.js'
     // 'app/libs/cache-polyfill.js',
     // 'app/libs/lazyload-8.17.0/lazyload.min.js',
+
     'app/js/main.js'
+
     //    'app/libs/anime-master/lib/anime.min.js'
     // 'app/blocks/video.js/docs/video.js'
   ])

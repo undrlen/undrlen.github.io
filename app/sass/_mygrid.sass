@@ -1,0 +1,25 @@
+
+=g($n, $offset: 30px, $columns: 12, $system: margin)
+  $val: (100% / $columns) * $n
+  $unit: 0px
+  @if $offset == 0px
+    $unit: 0px
+  @else if $offset == 0%
+    $unit: 0%
+  @else
+    $unit: $offset % $offset
+  #{$system}-left: ($offset / 2)
+  #{$system}-right: ($offset / 2)
+  word-wrap: break-word
+  @if $system == margin
+    box-sizing: border-box
+  @if $system == padding
+    box-sizing: content-box
+  @if $unit == 0px
+    width: #{calc(#{$val} - #{$offset})}
+  @if $unit == 0%
+    width: $val - $offset
+
+=m($offset:30px)
+  margin-left: ($offset / 2) * -1
+  margin-right: ($offset / 2) * -1

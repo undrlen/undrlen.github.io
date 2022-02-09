@@ -4,7 +4,6 @@
 =fc($width)
 	&:nth-of-type(1n+2)
 		margin-left: $width
-		
 
 =r($width)
 	@media (max-width: $width+ "px")
@@ -15,9 +14,9 @@
 		@content
 
 =a
-	margin:
-		left: auto
-		right: auto
+	margin: 0
+	left: auto
+	right: auto
 
 @function p($ch, $zn)
 	@return ($ch / $zn * 100%)
@@ -53,7 +52,6 @@
 	&:after
 		clear: both
 
-
 =pseudo($display: block, $pos: absolute, $content: '')
 	content: $content
 	display: $display
@@ -73,8 +71,8 @@
 	$padding: unquote( ( $y / $x ) * 100 + '%' )
 	@if $pseudo
 		&:before
-			+pseudo($pos: relative);
-			width: 100%;
+			+pseudo($pos: relative)
+			width: 100%
 			padding-top: $padding
 	@else
 		padding-top: $padding
@@ -101,7 +99,7 @@
 		border-bottom: $size solid transparent
 		border-left: $size solid $color
 		margin-right: -$size
-	@else if  $direction == left
+	@else if	$direction == left
 		border-top: $size solid transparent
 		border-bottom: $size solid transparent
 		border-right: $size solid $color
@@ -169,7 +167,6 @@
 		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color)
 		background: radial-gradient(ellipse at center, $start-color, $end-color)
 
-
 =pa($l: false, $t: false, $r: false, $b: false)
 	position: absolute
 	@if $b
@@ -184,7 +181,6 @@
 	@else
 		left: $l
 		top: $t
-		
 
 =fa($prefix, $content)
 	&-#{$prefix}
@@ -203,7 +199,6 @@
 		color: $color
 		@if $size != ""
 			font-size: $size
-
 
 	&:-moz-placeholder
 		color: $color

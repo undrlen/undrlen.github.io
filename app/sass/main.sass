@@ -1,43 +1,47 @@
 
 // @import "mixins"
+@import "vars"
 @import "fonts"
-// @import "libs"
-@import "_mystyle"
+@import "reset"
+@import "mystyle"
+
+body
+  font-family: ProximaNova, sans-serif
+  color: #826ba9
 
 .container
   margin: 0 auto
   max-width: 1600px
-  // background-color: #eee
-  background-color: #2e194a
+  background-color: #2d1948
+
+.wrap_hero
+  background-image: url(../img/hero.png)
+  background-repeat: no-repeat
+  background-size: contain
+  height: p(1105, 1600)
+  max-height: 1105px
 
 .header
-  max-width: 1100px
-  margin: 0 auto
-  border-bottom: 1px solid #705096
-
-.header_ul
-  padding-left: 0
-
-.header_ul:after
-  display: block
-  content: " "
-  clear: both
-
-.header_ul li
-  list-style: none
-  float: left
-  padding: 4.125em 0 2.5em 1em
-
-.header_ul li:nth-child(1) a
-  font-size: 1.125rem
-
-.header_ul li + li
-  float: right
-
-.header_ul a
-  color: #e3d5ff
-  font-family: ProximaNova, sans-serif
-  font-size: 0.875rem
+  display: flex
+  justify-content: space-between
+  // line-height: 1.5
   font-weight: 700
   text-transform: uppercase
+
+.logo_header
+  font-size: 1.125rem
+  color: #e3d5ff
   text-decoration: none
+
+.wrap_links
+  & a
+    display: inline-block
+    font-size: 0.875rem
+    text-decoration: none
+    color: #e3d5ff
+
+.banner_content
+  p
+    color: #baa6e3
+  button
+    color: #f1eaff

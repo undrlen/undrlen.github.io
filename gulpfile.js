@@ -24,6 +24,7 @@ function browsersync() {
 function styles() {
   return src('app/sass/main.sass', { sourcemaps: true })
     .pipe(sass().on('error', sass.logError))
+    // .pipe(sass().on('error'))
     .pipe(autoprefixer())
     .pipe(dest('app/css/', { sourcemaps: '.' }))
     .pipe(bs.stream())

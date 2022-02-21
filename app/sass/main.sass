@@ -8,18 +8,19 @@
 body
   font-family: ProximaNova, sans-serif
   color: #826ba9
+  background-color: #2d1948
 
 .container
   margin: 0 auto
   max-width: 1600px
-  background-color: #2d1948
 
 .wrap_hero
-  background-image: url(../img/hero.png)
+  background-image: url(../img/banner.png)
   background-repeat: no-repeat
   background-size: contain
-  height: p(1105, 1600)
+  height: calc(1105 / 1600 * 100vw)
   max-height: 1105px
+  padding: 0 .9375rem
 
 .header
   display: flex
@@ -27,6 +28,13 @@ body
   // line-height: 1.5
   font-weight: 700
   text-transform: uppercase
+  height: 7.25em
+  max-width: 1110px
+  margin: 0 auto
+  padding-top: 4.125em
+  border-bottom: 1px solid #543080
+  letter-spacing: .1em
+  word-spacing: -0.375em
 
 .logo_header
   font-size: 1.125rem
@@ -34,11 +42,31 @@ body
   text-decoration: none
 
 .wrap_links
+  position: relative
+  top: 2px
   & a
     display: inline-block
     font-size: 0.875rem
     text-decoration: none
     color: #e3d5ff
+    padding-bottom: .75em
+    position: relative
+    overflow: hidden
+    &::after
+      content: ""
+      width: 1.1875em
+      display: block
+      border: 1px solid red
+      position: absolute
+      bottom: 0
+      left: -2em
+      transform: translateX(-50%)
+      transition: left .4s
+    &:hover::after
+      left: 50%
+
+  & a + a
+    margin-left: 1.78em
 
 .banner_content
   p

@@ -18,9 +18,6 @@
 	left: auto
 	right: auto
 
-@function p($ch, $zn)
-	@return ($ch / $zn) * 100vw
-
 =cl
 	&:after
 		content: ''
@@ -67,57 +64,6 @@
 	left: 0
 	background-color: rgba(0, 0, 0, $bgc)
 
-=responsive-ratio($x,$y, $pseudo: false)
-	$padding: unquote( ( $y / $x ) * 100 + '%' )
-	@if $pseudo
-		&:before
-			+pseudo($pos: relative)
-			width: 100%
-			padding-top: $padding
-	@else
-		padding-top: $padding
-
-=css-triangle($color, $size: 6px, $direction: down, $position: absolute, $round: false)
-	+pseudo($pos: $position)
-	width: 0
-	height: 0
-	@if $round
-		border-radius: 3px
-
-	@if $direction == down
-		border-left: $size solid transparent
-		border-right: $size solid transparent
-		border-top: $size solid $color
-		margin-top: 0 - round( $size / 2.5 )
-	@else if $direction == up
-		border-left: $size solid transparent
-		border-right: $size solid transparent
-		border-bottom: $size solid $color
-		margin-bottom: 0 - round( $size / 2.5 )
-	@else if $direction == right
-		border-top: $size solid transparent
-		border-bottom: $size solid transparent
-		border-left: $size solid $color
-		margin-right: -$size
-	@else if	$direction == left
-		border-top: $size solid transparent
-		border-bottom: $size solid transparent
-		border-right: $size solid $color
-		margin-left: -$size
-
-// =font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
-// 	@font-face
-// 		font-family: $font-family
-// 		font-weight: $weight
-// 		font-style: $style
-
-// 		@if $asset-pipeline == true 
-// 			src: font-url('#{$file-path}.eot')
-// 			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
-// 		@else
-// 			src: url('#{$file-path}.eot')
-// 			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
-
 =font-face($font-name, $file-name, $font-weight: 400, $font-style: normal, $font-display: fallback)
 	@font-face
 		font-family: quote($font-name)
@@ -146,10 +92,6 @@
 		line-height: $lh
 	@if $style
 		font-style: $style
-
-@function calculateRem($size)
-	$remSize: $size / 16px
-	@return $remSize * 1rem
 
 =f-z($size)
 	font-size: $size
@@ -214,43 +156,3 @@
 		color: $color
 		@if $size != ""
 			font-size: $size
-
-=three($width_page, $margins_and_paddings, $mr: 20, $min_width_col: 200)
-	$step: $margins_and_paddings + $mr*2 + $min_width_col*3
-	+ib
-	width: p(($width_page - 2*$mr)/3, $width_page)
-	&:not(:last-child)
-		margin-right: p($mr, $width_page)
-		+r($step)
-			margin-right: 0
-	+r($step)
-		width: 100%
-
-=two($width_page, $margins_and_paddings, $mr: 20, $min_width_col: 210)
-	$step: $margins_and_paddings + $mr + $min_width_col*2
-	+ib
-	width: p(($width_page - $mr)/2, $width_page)
-	&:not(:last-child)
-		margin-right: p($mr, $width_page)
-		+r($step)
-			margin-right: 0
-	+r($step)
-		width: 100%
-
-=fo($width_page, $margins_and_paddings, $mr: 20, $min_width_col: 210)
-	$step1: $margins_and_paddings + 3*$mr + $min_width_col*4
-	$step2: $margins_and_paddings/2 + $mr + $min_width_col*2
-	+ib
-	width: p(($width_page - 3*$mr)/4, $width_page)
-	&:not(:last-child)
-		margin-right: p($mr, $width_page)
-		+r($step1)
-			margin-right: inherit
-	+r($step1)
-		width: p(($width_page - $mr)/2, $width_page)
-		&:nth-child(odd)
-			margin-right: p($mr, $width_page)
-			+r($step2)
-				margin-right: 0
-	+r($step2)
-		width: 100%

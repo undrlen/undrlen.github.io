@@ -466,20 +466,21 @@ html {
 body {
   font-family: ProximaNova, sans-serif;
   color: #826ba9;
+  background-color: #2d1948;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1600px;
-  background-color: #2d1948;
 }
 
 .wrap_hero {
-  background-image: url(../img/hero.png);
+  background-image: url(../img/banner.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 69.0625vw;
   max-height: 1105px;
+  padding: 0 0.9375rem;
 }
 
 .header {
@@ -489,6 +490,13 @@ body {
       justify-content: space-between;
   font-weight: 700;
   text-transform: uppercase;
+  height: 7.25em;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 4.125em;
+  border-bottom: 1px solid #543080;
+  letter-spacing: 0.1em;
+  word-spacing: -0.375em;
 }
 
 .logo_header {
@@ -497,11 +505,36 @@ body {
   text-decoration: none;
 }
 
+.wrap_links {
+  position: relative;
+  top: 2px;
+}
 .wrap_links a {
   display: inline-block;
   font-size: 0.875rem;
   text-decoration: none;
   color: #e3d5ff;
+  padding-bottom: 0.75em;
+  position: relative;
+  overflow: hidden;
+}
+.wrap_links a::after {
+  content: "";
+  width: 1.1875em;
+  display: block;
+  border: 1px solid red;
+  position: absolute;
+  bottom: 0;
+  left: -2em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition: left 0.4s;
+}
+.wrap_links a:hover::after {
+  left: 50%;
+}
+.wrap_links a + a {
+  margin-left: 1.78em;
 }
 
 .banner_content p {

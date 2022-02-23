@@ -547,8 +547,8 @@ body {
   font-size: 4.375rem;
   color: #e3d5ff;
   font-weight: 700;
-  line-height: 1.1;
   text-transform: uppercase;
+  letter-spacing: 0.5rem;
 }
 .banner_content .slogan_one {
   font-size: 5rem;
@@ -566,17 +566,18 @@ body {
   margin-top: 2.5em;
   margin-bottom: 3.3em;
   width: 45.4545454545%;
+  letter-spacing: 0.125rem;
+  line-height: 1.4;
 }
 .banner_content button {
-  color: #f1eaff;
   width: 11.25rem;
   height: 3.188rem;
   background-color: #f33c7a;
   color: #f1eaff;
-  font-size: 1.125em;
-  line-height: 1;
+  font-size: 1.125rem;
   font-weight: 700;
   text-transform: uppercase;
   border: none;
+  letter-spacing: 0.125rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -5,7 +5,6 @@
   font-style: normal;
   font-display: fallback;
 }
-
 @font-face {
   font-family: "ProximaNova";
   src: url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.woff2") format("woff2"), url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff");
@@ -13,12 +12,10 @@
   font-style: normal;
   font-display: fallback;
 }
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -109,13 +106,11 @@ video {
 }
 
 /* make sure to set some focus styles for accessibility */
-
 :focus {
   outline: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -180,7 +175,6 @@ textarea {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-
 audio,
 canvas,
 video {
@@ -194,7 +188,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -204,7 +197,6 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-
 [hidden] {
   display: none;
 }
@@ -215,7 +207,6 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-
 html {
   font-size: 100%;
   /* 1 */
@@ -228,7 +219,6 @@ html {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-
 a:focus {
   outline: thin dotted;
 }
@@ -236,7 +226,6 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-
 a:active,
 a:hover {
   outline: 0;
@@ -246,7 +235,6 @@ a:hover {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-
 img {
   border: 0;
   /* 1 */
@@ -257,7 +245,6 @@ img {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-
 figure {
   margin: 0;
 }
@@ -265,7 +252,6 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-
 form {
   margin: 0;
 }
@@ -273,7 +259,6 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -285,7 +270,6 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-
 legend {
   border: 0;
   /* 1 */
@@ -302,7 +286,6 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-
 button,
 input,
 select,
@@ -321,7 +304,6 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-
 button,
 input {
   line-height: normal;
@@ -333,7 +315,6 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-
 button,
 select {
   text-transform: none;
@@ -348,7 +329,6 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-
 button,
 html input[type=button],
 input[type=reset],
@@ -364,7 +344,6 @@ input[type=submit] {
 /**
  * Re-set default cursor for disabled elements.
  */
-
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -376,7 +355,6 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-
 input[type=checkbox],
 input[type=radio] {
   box-sizing: border-box;
@@ -394,7 +372,6 @@ input[type=radio] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-
 input[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -406,7 +383,6 @@ input[type=search] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -415,7 +391,6 @@ input[type=search]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -426,7 +401,6 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-
 textarea {
   overflow: auto;
   /* 1 */
@@ -437,7 +411,6 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -486,9 +459,7 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
@@ -501,6 +472,19 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1600px;
+}
+
+.content {
+  padding: 0 0.9375rem;
+}
+
+h2 {
+  color: #e3d5ff;
+  font-size: 2.375rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* start banner */
 }
 
 .wrap_hero {
@@ -516,7 +500,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+      justify-content: space-between;
   font-weight: 700;
   text-transform: uppercase;
   height: 7.25em;
@@ -538,7 +522,6 @@ body {
   position: relative;
   top: 2px;
 }
-
 .wrap_links a {
   display: inline-block;
   font-size: 0.875rem;
@@ -548,7 +531,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 .wrap_links a::after {
   content: "";
   width: 1.1875em;
@@ -558,14 +540,12 @@ body {
   bottom: 0;
   left: -2em;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   transition: left 0.4s;
 }
-
 .wrap_links a:hover::after {
   left: 50%;
 }
-
 .wrap_links a + a {
   margin-left: 1.78em;
 }
@@ -576,7 +556,6 @@ body {
   padding-top: 12em;
   padding-left: 3em;
 }
-
 .banner_content h1 {
   font-size: 4.375rem;
   color: #e3d5ff;
@@ -584,21 +563,16 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }
-
 .banner_content .slogan_one {
   font-size: 5rem;
   font-weight: 400;
 }
-
 .banner_content .slogan_red {
   color: #f33c7a;
 }
-
 .banner_content span {
-  display: inline-block;
   width: 100%;
 }
-
 .banner_content p {
   color: #baa6e3;
   margin-top: 2.5em;
@@ -607,7 +581,6 @@ body {
   letter-spacing: 0.125rem;
   line-height: 1.4;
 }
-
 .banner_content button {
   width: 11.25rem;
   height: 3.188rem;
@@ -620,4 +593,44 @@ body {
   letter-spacing: 0.125rem;
 }
 
+/* end banner */
+/* start about */
+.about {
+  max-width: 1015px;
+  margin: 0 auto;
+  padding-bottom: 9.375em;
+}
+.about h2 {
+  margin-bottom: 1.75rem;
+}
+
+.wrap_about {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.wrap_about img {
+  margin-left: 11rem;
+  min-width: 100%;
+}
+
+.about_content h3 {
+  color: #e3d5ff;
+  font-size: 2.375rem;
+  font-weight: 400;
+  line-height: 3rem;
+  margin-bottom: 3.125rem;
+}
+.about_content h3 span {
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.about_content p {
+  color: #826ba9;
+  line-height: 1.2;
+}
+
+/* end about */
 /*# sourceMappingURL=main.css.map */

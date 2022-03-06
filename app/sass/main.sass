@@ -118,12 +118,10 @@ h2
 
 /* start content */
 
-.content
-  padding: 0 .9375rem
-
 /* start about */
 
 .about
+  padding: 0 .9375rem
   max-width: 1015px
   margin: 0 auto
   padding-bottom: 9.375em
@@ -161,5 +159,114 @@ h2
   height: calc(500 / 1015 * 100vw)
 
 /* end about */
+
+/* start skills */
+.skills
+  padding: 5rem .9375rem
+  background-color: #1b0c30
+  h2
+    margin-bottom: 2.5rem
+  p
+    max-width: 540px
+    margin: 0 auto
+    margin-bottom: 8.125rem
+    text-align: center
+    letter-spacing: .125rem
+    line-height: 1.4
+
+  &_wrap_image
+    margin: 0 auto
+    max-width: 1110px
+    display: flex
+    justify-content: space-around
+
+  &_wrap_for_img
+    img
+      margin-bottom: 1.25rem
+    p
+      color: #e3d5ff
+      font-size: 1.125rem
+      line-height: 1
+      margin: 0
+
+/* end skills */
+
+/* start work */
+.work
+  // margin: 0 auto
+  padding-top: 9.125rem
+  padding-bottom: 9.625rem
+  text-align: center
+  h2
+    margin-bottom: 2.375rem
+  p
+    max-width: 540px
+    margin: 0 auto
+    margin-bottom: 8.125rem
+    color: #826ba9
+    line-height: 1.35
+    letter-spacing: .1rem
+  button
+    color: white
+    font-size: 1.188rem
+    text-transform: uppercase
+    border: 1px solid #e3d5ff
+    border-radius: .625rem
+    background-color: #2d1948
+    line-height: 1
+    padding: 1.25rem 4.375rem
+
+.wrap_images
+  margin-bottom: 4.375rem
+  img
+    width: 25%
+    display: block
+    float: left
+  &::after
+    content: " "
+    display: table
+    clear: both
+
+/* end work */
+
+/* start process */
+
+.process
+  background-image: url(../img/bg_process.png)
+  background-repeat: no-repeat
+  background-size: contain
+  height: calc(678 / 1600 * 100vw)
+  max-height: 678px
+  padding: 6.75rem 0.9375rem
+  h2
+    margin-bottom: 2.5rem
+  p
+    max-width: 540px
+    text-align: center
+    margin: 0 auto
+    margin-bottom: 8.125rem
+    line-height: 1.35
+    letter-spacing: .1rem
+
+.wrap_media
+  display: flex
+  justify-content: space-around
+  max-width: 1110px
+  margin: 0 auto
+  p
+    text-align: left
+  // padding: 6.75rem 0
+
+.media
+
+.far
+  float: right
+
+.fa-gem
+
+.media__body
+  overflow: auto
+
+/* end process */
 
 /* end content */

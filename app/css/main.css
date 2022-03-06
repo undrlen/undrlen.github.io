@@ -593,12 +593,9 @@ h2 {
 
 /* end wrap_hero */
 /* start content */
-.content {
-  padding: 0 0.9375rem;
-}
-
 /* start about */
 .about {
+  padding: 0 0.9375rem;
   max-width: 1015px;
   margin: 0 auto;
   padding-bottom: 9.375em;
@@ -649,5 +646,125 @@ h2 {
 }
 
 /* end about */
+/* start skills */
+.skills {
+  padding: 5rem 0.9375rem;
+  background-color: #1b0c30;
+}
+.skills h2 {
+  margin-bottom: 2.5rem;
+}
+.skills p {
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 8.125rem;
+  text-align: center;
+  letter-spacing: 0.125rem;
+  line-height: 1.4;
+}
+.skills_wrap_image {
+  margin: 0 auto;
+  max-width: 1110px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.skills_wrap_for_img img {
+  margin-bottom: 1.25rem;
+}
+.skills_wrap_for_img p {
+  color: #e3d5ff;
+  font-size: 1.125rem;
+  line-height: 1;
+  margin: 0;
+}
+
+/* end skills */
+/* start work */
+.work {
+  padding-top: 9.125rem;
+  padding-bottom: 9.625rem;
+  text-align: center;
+}
+.work h2 {
+  margin-bottom: 2.375rem;
+}
+.work p {
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 8.125rem;
+  color: #826ba9;
+  line-height: 1.35;
+  letter-spacing: 0.1rem;
+}
+.work button {
+  color: white;
+  font-size: 1.188rem;
+  text-transform: uppercase;
+  border: 1px solid #e3d5ff;
+  border-radius: 0.625rem;
+  background-color: #2d1948;
+  line-height: 1;
+  padding: 1.25rem 4.375rem;
+}
+
+.wrap_images {
+  margin-bottom: 4.375rem;
+}
+.wrap_images img {
+  width: 25%;
+  display: block;
+  float: left;
+}
+.wrap_images::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* end work */
+/* start process */
+.process {
+  background-image: url(../img/bg_process.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 42.375vw;
+  max-height: 678px;
+  padding: 6.75rem 0.9375rem;
+}
+.process h2 {
+  margin-bottom: 2.5rem;
+}
+.process p {
+  max-width: 540px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 8.125rem;
+  line-height: 1.35;
+  letter-spacing: 0.1rem;
+}
+
+.wrap_media {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.wrap_media p {
+  text-align: left;
+}
+
+.far {
+  float: right;
+}
+
+.media__body {
+  overflow: auto;
+}
+
+/* end process */
 /* end content */
 /*# sourceMappingURL=main.css.map */

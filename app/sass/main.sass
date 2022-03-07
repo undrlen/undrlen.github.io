@@ -237,35 +237,44 @@ h2
   background-size: contain
   height: calc(678 / 1600 * 100vw)
   max-height: 678px
-  padding: 6.75rem 0.9375rem
+  padding: 6.75rem 0.9375rem 1.125rem
   h2
     margin-bottom: 2.5rem
-  p
+  >p
     max-width: 540px
     text-align: center
     margin: 0 auto
-    margin-bottom: 8.125rem
+    margin-bottom: 7.1875rem
     line-height: 1.35
     letter-spacing: .1rem
 
 .wrap_media
   display: flex
   justify-content: space-around
+  flex-wrap: wrap
   max-width: 1110px
   margin: 0 auto
   p
     text-align: left
-  // padding: 6.75rem 0
 
 .media
+  width: calc(100% / 3 - 1.875rem)
+  margin-bottom: 5rem
 
 .far
   float: right
-
-.fa-gem
+  font-size: 2.5rem
 
 .media__body
-  overflow: auto
+  overflow: hidden
+  padding-right: 2.5rem
+  h4
+    color: #e3d5ff
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 1rem
+  p
+    line-height: 1.5
 
 /* end process */
 

@@ -46,7 +46,7 @@ function js() {
   return src([
     'app/libs/jquery/dist/jquery.min.js',
     // 'app/libs/menu/drop_down_nav/doubletaptogo.js',
-    // 'app/libs/jquery-migrate-1.2.1.min.js'
+    'app/libs/jquery-migrate-1.2.1.min.js',
     'app/libs/slick/slick.js',
 
     // 'app/libs/ResponsiveSlides/responsiveslides.min.js',
@@ -60,7 +60,7 @@ function js() {
     // 'app/libs/cache-polyfill.js',
     // 'app/libs/lazyload-8.17.0/lazyload.min.js',
 
-    'app/js/main.js'
+    // 'app/js/main.js'
 
     //    'app/libs/anime-master/lib/anime.min.js'
     // 'app/blocks/video.js/docs/video.js'

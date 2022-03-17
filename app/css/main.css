@@ -570,6 +570,7 @@ h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.1875rem;
 }
 
 /* start wrap_hero */
@@ -722,6 +723,7 @@ h2 {
   color: #826ba9;
   line-height: 1.2;
   width: 60%;
+  letter-spacing: 0.125rem;
 }
 
 .about_image {
@@ -749,7 +751,7 @@ h2 {
   margin-bottom: 8.125rem;
   text-align: center;
   letter-spacing: 0.125rem;
-  line-height: 1.4;
+  line-height: 1.7;
 }
 .skills_wrap_image {
   margin: 0 auto;
@@ -784,8 +786,8 @@ h2 {
   margin: 0 auto;
   margin-bottom: 8.125rem;
   color: #826ba9;
-  line-height: 1.35;
-  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  letter-spacing: 0.125rem;
 }
 .work button {
   color: white;
@@ -830,8 +832,8 @@ h2 {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 7.1875rem;
-  line-height: 1.35;
-  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  letter-spacing: 0.125rem;
 }
 
 .wrap_media {
@@ -868,7 +870,7 @@ h2 {
   margin-bottom: 1rem;
 }
 .media__body p {
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 /* end process */
@@ -888,11 +890,11 @@ h2 {
   max-width: 33.75rem;
   text-align: center;
   letter-spacing: 0.125rem;
-  line-height: 1.4;
+  line-height: 1.7;
 }
 
 .customers_slick p {
-  line-height: 1.8;
+  line-height: 1.7;
   color: #e3d5ff;
   max-width: 100%;
   font-size: 1.313rem;
@@ -920,5 +922,77 @@ h2 {
 }
 
 /* end customers */
+/* start contact */
+.contact_us {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 8rem;
+  padding-bottom: 5.625rem;
+  background-image: url(../img/bg_contact.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 54.1875vw;
+  max-height: 867px;
+  text-align: center;
+}
+.contact_us h2 {
+  margin-bottom: 2.5rem;
+}
+.contact_us p {
+  max-width: 540px;
+  margin: 0 auto;
+  letter-spacing: 0.125rem;
+  line-height: 1.7;
+  margin-bottom: 6rem;
+}
+.contact_us form {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.contact_us textarea {
+  width: 100%;
+  min-height: 270px;
+  margin-bottom: 1.875rem;
+  border: 1px solid rgba(227, 213, 255, 0.1);
+  padding: 1rem 1.25rem;
+  color: rgba(190, 176, 216, 0.5);
+  font-size: 0.938rem;
+  line-height: 1.5;
+  background-color: #1b0c30;
+}
+.contact_us input {
+  background-color: #1b0c30;
+  color: rgba(190, 176, 216, 0.5);
+  border: 1px solid rgba(227, 213, 255, 0.1);
+  padding: 0 1.25rem;
+  line-height: 2.875rem;
+  font-size: 0.938rem;
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
+}
+.contact_us button {
+  width: 11.25rem;
+  height: 3.188rem;
+  background-color: #f33c7a;
+  color: #f1eaff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+  border: none;
+  letter-spacing: 0.125rem;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: ProximaNova, sans-serif;
+}
+
+.wrap_inputs {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-bottom: 2.125rem;
+}
+
+/* end contact */
 /* end content */
 /*# sourceMappingURL=main.css.map */
